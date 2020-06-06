@@ -1,0 +1,150 @@
+/* Universal Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #4D4D4D;
+}
+
+/* Page Layout */
+
+main {
+    margin-left: 300px;
+}
+
+/* Navbar */
+
+nav {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid rgba(0, 22, 22, 0.4);
+    height: 100%;
+    position: fixed;
+}
+
+#navbar header {
+    font-weight: 400;
+    padding: 20px 30px;
+    position: fixed;
+    font-size: 28px;
+}
+
+nav div {
+    margin-top: 74px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 30px;
+}
+
+.nav-link:first-of-type {
+    border-top: 1px solid black;
+}
+
+.nav-link:nth-of-type(2n) {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.nav-link:last-of-type {
+    border-bottom: none;
+    flex-grow: 1;
+}
+
+/* Main content */
+
+main {
+    padding: 15px 20px 100px 35px;
+}
+
+.main-section header {
+    margin: 22px 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+p {
+    margin: 20px 0;
+    margin-left: 15px;
+    color: #4D4D4D;
+    line-height: 1.4;
+}
+
+ul {
+    margin: 15px 0;
+    margin-left: 40px;
+    color: #4D4D4D;
+    line-height: 1.4;
+}
+
+li {
+    margin: 20px 0;
+    margin-left: 30px;
+}
+
+code {
+    background-color: #f7f7f7;
+    color: #4D4D4D;
+    font-family: monospace;
+    font-size: 13px;
+    display: block;
+    padding: 15px;
+    margin: 20px 0;
+    margin-right: 10px;
+    margin-left: 20px;
+    line-height: 1.8;
+    white-space: pre;
+    overflow: scroll;
+}
+
+li a {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+
+    /* Navbar changes */
+
+    main {
+        margin-left: 0;
+        min-width: 0;
+    }
+
+    nav {
+        position: static;
+        width: 98vw;
+        height: 40vh;
+        border-right: none;
+    }
+
+    nav div {
+        margin-top: 0;
+        border: 1px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    #navbar header {
+        position: static;
+        padding: 20px 30px;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 14px 30px;
+    }
+}
